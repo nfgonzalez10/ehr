@@ -8,11 +8,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    develop:
-      watch:
-        - action: sync
-          path: ./ehr-backend
-          target: /src
 
   frontend:
     build:
